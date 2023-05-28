@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="welcome">
+                <p id="greeting">Hello world!</p>
+                <h2>Todo list app</h2>
+            </div>
+            <div class="input-todo">
+                <input type="text" id="input-box" placeholder="Add your to-do list">
+                <button id="add-button" type="submit">Add</button>
+            </div>
+            <div class="filter-tasks">
+                <input type="text" id="filter-input" placeholder="Filter tasks by name">
+                <label id="filter-checkbox">
+                    <input type="checkbox" id="filter-checkbox-clicked">
+                    Show completed tasks
+                </label>
+            </div>
+        </div>
+        <div class="box-todo-done-list">
+            <div class="todo-list">
+                <p>Need to do!</p>
+                <ul id="list-container">
+                    <!-- The to-do list items will be dynamically added here -->
+                    <!-- <li class="checked"> TASK 1</li>
+                    <li> TASK 2</li>
+                    <li> TASK 3</li> -->
+                </ul>
+            </div>
+            <div class="completed-list">
+                <p>Completed tasks</p>
+                <ul id="completed-container">
+                    <!-- The completed tasks will be dynamically added here -->
+                    <!-- <li> TASK 1</li>
+                    <li> TASK 2</li>
+                    <li> TASK 3</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

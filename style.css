@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, violet, red);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: bisque;
+    width: 100%;
+    max-width: 540px;
+    /* margin: 10px auto; */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.welcome p {
+    font-size: 1.5ex;
+    color: blue;
+    margin-left: 15px;
+}
+
+.welcome h2 {
+    font-size: 2em;
+    color: red;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.input-todo {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: aquamarine;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.input-todo input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+}
+
+.input-todo button {
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background-color: darkcyan;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.filter-tasks {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 15px;
+}
+
+.filter-tasks input {
+    /* background-color: black; */
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+#filter-checkbox {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: darkgray;
+    margin-right: 5px;
+}
+
+.filter-tasks label {
+    font-size: 0.8em;
+}
+
+.filter-tasks label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .filter-tasks label {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      white-space: normal; /* Allow line breaks on smaller screens */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+.box-todo-done-list {
+    background: #fff;
+    width: 100%;
+    max-width: 540px;
+    margin: 10px auto 20px;
+    padding: 40px 30px 20px;
+    border-radius: 10px;
+
+}
+
+.todo-list {
+    margin-bottom: 30px;
+}
+
+.todo-list p {
+    margin-bottom: 10px;
+}
+
+#list-container {
+    list-style: none;
+}
+
+#list-container li {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px 12px 50px;
+    border-radius: 10px;
+    background-color: aqua;
+    margin-bottom: 5px;
+    user-select: none;
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+  
+.button-container button {
+    margin-left: 5px;
+    background-color: bisque;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: background-color 0.3s;
+  }
+  
+.button-container button:hover {
+    background-color: #e5e5e5;
+}
+
+/* #list-container li button:first-child {
+    margin-left: 0;
+} */
+
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/images/unchecked.png);
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+    /* cursor: pointer; */
+}
+
+#list-container li:hover {
+    background-color: #f5f5f5;
+}
+
+.completed-list li.checked {
+    color: #555;
+    text-decoration: line-through;
+    position: relative;
+}
+
+.completed-list li.checked::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/images/checked.png);
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+#task-name {
+    cursor: pointer;
+}
+
+.completed-list {
+    margin-bottom: 30px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.completed-list p {
+    margin-bottom: 10px;
+}
+
+#completed-container {
+    list-style: none;
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+#completed-container li {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px 12px 50px;
+    border-radius: 10px;
+    background-color: gold;
+    margin-bottom: 5px;
+    user-select: none;
+    position: relative;
+}
